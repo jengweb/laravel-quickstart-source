@@ -1,0 +1,66 @@
+version: '2'
+
+services:
+    lb:
+        image: 3dsinteractive/nginx:1.12
+        ports:
+            - 80:8080
+        depends_on:
+            - web1
+            - web2
+        volumes:
+            - ./dockers/web/lb/logs:/opt/bitnami/nginx/logs
+            - ./dockers/web/lb/nginx:/bitnami/nginx
+    web1:
+        image: 3dsinteractive/nginx:1.12
+        depends_on:
+            - web1-phpfpm
+        volumes:
+            - ./dockers/web/web1/logs:/opt/bitnami/nginx/logs
+            - ./dockers/web/web1/nginx:/bitnami/nginx
+            - ./web:/app
+    web1-phpfpm:
+        image: 3dsinteractive/php-fpm:7.1
+        volumes:
+            - ./dockers/web/web1/phpfpm:/bitnami/php-fpm
+            - ./web:/app
+    web2:
+        image: 3dsinteractive/nginx:1.12
+        depends_on:
+            - web2-phpfpm
+        volumes:
+            - ./dockers/web/web2/logs:/opt/bitnami/nginx/logs
+            - ./dockers/web/web2/nginx:/bitnami/nginx
+            - ./web:/app
+    web2-phpfpm:
+        image: 3dsinteractive/php-fpm:7.1
+        volumes:
+            - ./dockers/web/web2/phpfpm:/bitnami/php-fpm
+            - ./web:/app
+    mysql:
+        image: 3dsinteractive/mysql:5.7
+        volumes:
+            - ./dockers/web/db/data:/bitnami/mysql
+        environment:
+            - ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_USER=my_user
+            - MYSQL_PASSWORD=my_password
+            - MYSQL_DATABASE=my_database
+        restart: always
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        depends_on:
+            - mysql
+        environment:
+            - MYSQL_USERNAME=my_user
+            - PMA_HOST=mysql
+    mysqltest:
+        image: 3dsinteractive/mysql:5.7
+        volumes:
+            - ./dockers/web/db-test/data:/bitnami/mysql
+        environment:
+            - ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_USER=my_user
+            - MYSQL_PASSWORD=my_password
+            - MYSQL_DATABASE=my_database
+        restart: always

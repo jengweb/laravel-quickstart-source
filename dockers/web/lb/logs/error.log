@@ -1,0 +1,16 @@
+2017/10/23 06:35:44 [warn] 32#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/23 06:36:57 [warn] 32#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/23 07:25:01 [warn] 33#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/23 07:27:58 [warn] 33#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/23 07:37:08 [warn] 32#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/26 09:55:48 [warn] 33#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/26 10:03:43 [warn] 32#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/26 10:04:37 [warn] 32#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/26 11:55:39 [warn] 33#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/27 07:00:09 [warn] 32#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/27 13:26:42 [warn] 33#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/27 16:35:25 [warn] 32#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/27 16:50:10 [warn] 32#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/28 07:32:56 [warn] 31#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/28 08:04:50 [warn] 31#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
+2017/10/28 08:11:10 [warn] 31#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /opt/bitnami/nginx/conf/nginx.conf:5
