@@ -1,5 +1,5 @@
-laravel-quickstart-source/dockers/web/db/data/*
-laravel-quickstart-source/dockers/web/db-test/data/*
+laravel-quickstart-source/dockers/web/db/data/data/*
+laravel-quickstart-source/dockers/web/db-test/data/data/*
 laravel-quickstart-source/dockers/web/lb/logs/*
 laravel-quickstart-source/dockers/web/web1/logs/*
 laravel-quickstart-source/dockers/web/web2/logs/*
