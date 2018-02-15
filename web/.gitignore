@@ -1,6 +1,4 @@
 /node_modules
-/vendor
-/vendor_
 /.idea
 /.vagrant
 yarn.log
