@@ -7,7 +7,6 @@ yarn.log
 *.zip
 /public/fonts
 /public/landing
-/public/templates
 /stats
 /storage/app/*
 /storage/framework/cache/*
