@@ -8,7 +8,6 @@ yarn.log
 /public/fonts
 /public/landing
 /public/templates
-/public/uploads
 /stats
 /storage/app/*
 /storage/framework/cache/*
