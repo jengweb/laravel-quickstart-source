@@ -1,0 +1,7 @@
+@import "../includes";
+.rating-review {
+  margin-top: 2px;
+  .guest-rating-static {
+    background-image: url($asset_path + "/rating-stars.png");
+  }
+}

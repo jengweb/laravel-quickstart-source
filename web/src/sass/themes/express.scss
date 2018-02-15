@@ -1,0 +1,86 @@
+@import "../includes";
+header {
+  .secondary-header {
+    background-color: $color-secondary-header;
+  }
+  .main-header {
+    .navigation-wrapper {
+      .nav-panel-wrapper {
+        .nav-panel {
+          .secondary-nav {
+            ul {
+              li {
+                a {
+                  color: $color-secondary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  .footer-bar-bottom {
+    .application-wrapper {
+      .article {
+        a {
+          color: $color-secondary;
+        }
+      }
+    }
+    .bp-guarantee-wrapper {
+      .info-box {
+        a {
+          color: $color-grey;
+        }
+      }
+    }
+  }
+}
+
+.info-block-container {
+  ul {
+    li {
+      a {
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+.ihg-group-section {
+  .article-box.yellow {
+    .article-block-container {
+      .heading {
+        color: $color-white;
+      }
+    }
+    .button-block {
+      .link {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+/* Default */
+.language-bar {
+  .language-name {
+    color: $color-secondary;
+  }
+}
+#weather_icon {
+  .wi {
+    color: $color-secondary;
+  }
+}
+.rating-review {
+  .guest-rating-static {
+    background-image: url($asset_path + "/rating-stars02.png");
+  }
+}
+.IWSfrCount {
+  color: $color-secondary;
+}

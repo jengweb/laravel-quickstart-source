@@ -1,0 +1,51 @@
+@import "../includes";
+.ihg-group-section {
+  padding-bottom: 25px;
+  @media screen and (min-width: $sc-lg-min) {
+    padding-bottom: 0;
+  }
+  .article-box {
+    &.red {
+      background-color: #f84239;
+    }
+    &.blue {
+      background-color: #18a0ae;
+    }
+    &.yellow {
+      background-color: #fddb00;
+      .article-block-container {
+        color: #00664f;
+        .heading {
+          color: #00664f;
+        }
+      }
+      .button-block {
+        .link {
+          color: #00664f;
+        }
+      }
+    }
+  }
+  .image-block-container {
+    .article-image {
+      padding-top: percentage(320/320);
+    }
+  }
+
+  .article-block-container {
+    position: relative;
+    padding: percentage(60/460) percentage(58/460) percentage(80/460);
+    height: 100%;
+    .heading {
+      @include fp('font-size', 22,26);
+      color: $color-white;
+    }
+    .button-block {
+      position: absolute;
+      bottom: percentage(35/460);
+      .link {
+        color: $color-white;
+      }
+    }
+  }
+}

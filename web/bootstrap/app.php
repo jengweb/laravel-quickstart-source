@@ -41,11 +41,6 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
-$app->singleton(
-    App\Helpers\ReserveWordProviderInterface::class,
-    App\Helpers\RedisReserveWordProvider::class
-);
-
 /*
 |--------------------------------------------------------------------------
 | Return The Application

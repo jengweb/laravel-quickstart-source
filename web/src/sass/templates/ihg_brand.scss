@@ -1,0 +1,237 @@
+@import "../includes";
+.ihg-brand-bar {
+  margin-top: percentage(40/640);
+  @media screen and (min-width: $sc-lg-min) {
+    margin-top: percentage(30/1380);
+  }
+  .hover {
+    position: absolute;
+    @include anchor-all(0);
+    opacity: 0;
+    visibility: hidden;
+  }
+  .ihg-brand {
+    background-color: $color-white;
+    position: absolute;
+    left: -1px;
+    width: percentage(126/320);
+    padding-top: percentage(70/320);
+    top: percentage(-8/210);
+    @media screen and (min-width: $sc-sm-min) {
+      width: percentage(140/640);
+      padding-top: percentage(75/640);
+      top: percentage(-10/210);
+    }
+    @media screen and (min-width: $sc-md-min) {
+      width: percentage(135/820);
+      padding-top: percentage(70/820);
+      top: percentage(-15/210);
+    }
+    @media screen and (min-width: $sc-lg-min) {
+      width: percentage(155/1540);
+      top: percentage(-23/210);
+      padding-top: percentage(80/1540);
+    }
+    a {
+      position: absolute;
+      @include anchor-all(0);
+      margin-right: percentage(15/155);
+      margin-bottom: percentage(25/155);
+      &:hover {
+        @media screen and (min-width: $sc-lg-min) {
+          .hover {
+            opacity: 1;
+            visibility: visible;
+          }
+          .main {
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+  .group-bar {
+    border: 1px solid #707372;
+    @media screen and (min-width: $sc-md-min) {
+      padding-top: percentage(30/820);
+      padding-bottom: percentage(35/820);
+    }
+    @media screen and (min-width: $sc-lg-min) {
+      display: flex;
+      padding-top: percentage(12/820);
+      padding-bottom: percentage(14/820);
+      align-items: center;
+    }
+    .brand {
+      padding-top: percentage(30/320);
+      @media screen and (min-width: $sc-sm-min) {
+        padding: percentage(30/640) percentage(20/640) percentage(15/640);
+      }
+      @media screen and (min-width: $sc-md-min) {
+        padding: 0 percentage(25/640);
+      }
+      @media screen and (min-width: $sc-lg-min) {
+        float: left;
+        width: percentage(1295/1540);
+        padding-left: percentage(110/1295);
+        padding-right: 0;
+        //@include padd-vert(percentage(18/1540));
+      }
+      .item-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width: $sc-lg-min) {
+          border-right: 1px solid #707372;
+        }
+        .item-container {
+          width: calc(100% / 2);
+          width: 50%;
+          @media screen and (min-width: $sc-sm-min) {
+            width: calc(100% / 3);
+            width: 33.333333%;
+          }
+          @media screen and (min-width: $sc-md-min) {
+            width: calc(100% / 4);
+            width: 25%;
+          }
+          @media screen and (min-width: $sc-lg-min) {
+            width: calc(100% / 6);
+            width: 16.6666667%;
+          }
+        }
+        .item {
+          position: relative;
+          padding-top: percentage(13/160);
+          padding-bottom: percentage(13/160);
+          @include padd-horz(15px);
+          @media screen and (min-width: $sc-sm-min) {
+            padding-top: percentage(10/212);
+            padding-bottom: percentage(10/212);
+          }
+          @media screen and (min-width: $sc-md-min) {
+            padding-top: percentage(10/205);
+            padding-bottom: percentage(10/205);
+          }
+          @media screen and (min-width: $sc-lg-min) {
+            @include padd-horz(percentage(25/215));
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+
+          a {
+            position: relative;
+            display: block;
+            text-align: center;
+            @include anchor-all(0);
+            @media screen and (min-width: $sc-lg-min) {
+              padding-top: percentage(66/125);
+            }
+            &:hover {
+              @media screen and (min-width: $sc-lg-min) {
+                .hover {
+                  opacity: 1;
+                  visibility: visible;
+                }
+                .main {
+                  opacity: 0;
+                  visibility: hidden;
+                }
+              }
+            }
+            .main {
+              @media screen and (min-width: $sc-lg-min) {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                transform: translateY(-50%);
+              }
+            }
+            .hover {
+              top: 50%;
+              left: 0;
+              right: 0;
+              -webkit-transform: translateY(-50%);
+              -moz-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+              -o-transform: translateY(-50%);
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+    }
+    .rewards {
+      text-align: center;
+      @media screen and (min-width: $sc-md-min) {
+        width: percentage(200/768);
+        position: absolute;
+        right: -1px;
+        bottom: percentage(-60/820);
+        background-color: $color-white;
+        padding-top: percentage(20/820);
+        padding-left: percentage(20/820);
+      }
+      @media screen and (min-width: $sc-lg-min) {
+        float: left;
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: percentage(245/1540);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+      }
+      a {
+        position: relative;
+        display: inline-block;
+        padding: 15px;
+        border-top: 1px solid #707372;
+        @include mgn-horz(percentage(37/240));
+        @media screen and (min-width: $sc-md-min) {
+          border-top: 0;
+          padding: 0;
+          margin: 0;
+        }
+        @media screen and (min-width: $sc-lg-min) {
+          display: block;
+          @include mgn-horz(percentage(30/245));
+        }
+        &:hover {
+          @media screen and (min-width: $sc-lg-min) {
+            .hover {
+              opacity: 1;
+              visibility: visible;
+            }
+            .main {
+              opacity: 0;
+              visibility: hidden;
+            }
+          }
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .brand-bar-text {
+    text-align: right;
+    font-size: 12px;
+    color: #999999;
+    margin-top: 5px;
+    @media screen and (min-width: $sc-md-min) {
+      margin-top: 25px;
+    }
+    @media screen and (min-width: $sc-lg-min) {
+      margin-top: 10px;
+    }
+  }
+}

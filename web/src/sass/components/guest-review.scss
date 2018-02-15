@@ -1,0 +1,79 @@
+@import "../includes";
+.IWSfrContentContainer { @include clearfix();}
+.IWSfrOverall {font-size: 11px; color: $color-white; float: left;}
+.IWSfrOutOf {float: left; font-size: 1.2em; padding-left: 15px;}
+.IWSfrOutOf a:focus {text-decoration: none;}
+.IWSfrCount {color: $color-white; font-size: 14px;}
+.IWSfrCount:after {    content: '\F105';
+  font-family: 'FontAwesome';
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 1.1em;
+  line-height: 1.17;
+  vertical-align: middle;
+  width: 20px;
+  padding-left: 0;
+  text-align: left;}
+.IWSfrOutOf a {color: #999999; font-size: 18px; padding-left: 8px; font-weight: normal;}
+.IWSfrContainer_horiz .IWSfrCount { padding-left: 0;}
+.hd-rating-stars{text-align:center}
+.hd-rating-stars .tile-link a{font-size:18px;text-decoration:none;color:#374049;font-weight:bold}
+.hd-rating-stars .tile-desc{padding-left:10px}
+.hd-rating-stars .rating-review{margin-bottom:10px}
+.guest-rating-static{background-image:url($asset_path + '/rating-stars.png');background-repeat:no-repeat;display:inline-block;height:15px;width:108px; background-size: 205%;}
+
+.background .IWSfrOutOf a {color: $color-white;}
+.rating-review {margin-top: 5px;}
+.rating-review .guest-rating-static{background-image:url($asset_path + '/rating-stars.png')}
+
+.rating-review .guest-rating-static.guest-rating-0{background-position:-92px -154px;}
+.rating-review .guest-rating-static.guest-rating-1{background-position:-92px -139px;}
+.rating-review .guest-rating-static.guest-rating-2{background-position:-92px -124px;}
+.rating-review .guest-rating-static.guest-rating-3{background-position:-92px -108px;}
+.rating-review .guest-rating-static.guest-rating-4{background-position:-92px -93px;}
+.rating-review .guest-rating-static.guest-rating-5{background-position:-92px -76px;}
+.rating-review .guest-rating-static.guest-rating-6{background-position:-92px -62px;}
+.rating-review .guest-rating-static.guest-rating-7{background-position:-92px -46px;}
+.rating-review .guest-rating-static.guest-rating-8{background-position:-92px -31px;}
+.rating-review .guest-rating-static.guest-rating-9{background-position:-92px -15px;}
+.rating-review .guest-rating-static.guest-rating-10{background-position:-92px -154px;}
+.rating-review .guest-rating-static.guest-rating-11{background-position:-92px -139px;}
+.rating-review .guest-rating-static.guest-rating-12{background-position:-92px -124px;}
+.rating-review .guest-rating-static.guest-rating-13{background-position:-92px -108px;}
+.rating-review .guest-rating-static.guest-rating-14{background-position:-92px -93px;}
+.rating-review .guest-rating-static.guest-rating-15{background-position:-92px -76px;}
+.rating-review .guest-rating-static.guest-rating-16{background-position:-92px -62px;}
+.rating-review .guest-rating-static.guest-rating-17{background-position:-92px -46px;}
+.rating-review .guest-rating-static.guest-rating-18{background-position:-92px -31px;}
+.rating-review .guest-rating-static.guest-rating-19{background-position:-92px -15px;}
+.rating-review .guest-rating-static.guest-rating-20{background-position:-69px -154px;}
+.rating-review .guest-rating-static.guest-rating-21{background-position:-69px -139px;}
+.rating-review .guest-rating-static.guest-rating-22{background-position:-69px -124px;}
+.rating-review .guest-rating-static.guest-rating-23{background-position:-69px -108px;}
+.rating-review .guest-rating-static.guest-rating-24{background-position:-69px -93px;}
+.rating-review .guest-rating-static.guest-rating-25{background-position:-69px -76px;}
+.rating-review .guest-rating-static.guest-rating-26{background-position:-69px -62px;}
+.rating-review .guest-rating-static.guest-rating-27{background-position:-69px -46px;}
+.rating-review .guest-rating-static.guest-rating-28{background-position:-69px -31px;}
+.rating-review .guest-rating-static.guest-rating-29{background-position:-69px -15px;}
+.rating-review .guest-rating-static.guest-rating-30{background-position:-46px -154px;}
+.rating-review .guest-rating-static.guest-rating-31{background-position:-46px -139px;}
+.rating-review .guest-rating-static.guest-rating-32{background-position:-46px -124px;}
+.rating-review .guest-rating-static.guest-rating-33{background-position:-46px -108px;}
+.rating-review .guest-rating-static.guest-rating-34{background-position:-46px -93px;}
+.rating-review .guest-rating-static.guest-rating-35{background-position:-46px -76px;}
+.rating-review .guest-rating-static.guest-rating-36{background-position:-46px -62px;}
+.rating-review .guest-rating-static.guest-rating-37{background-position:-46px -46px;}
+.rating-review .guest-rating-static.guest-rating-38{background-position:-46px -31px;}
+.rating-review .guest-rating-static.guest-rating-39{background-position:-46px -15px;}
+.rating-review .guest-rating-static.guest-rating-40{background-position:0 -154px;}
+.rating-review .guest-rating-static.guest-rating-41{background-position:0 -139px;}
+.rating-review .guest-rating-static.guest-rating-42{background-position:0 -124px;}
+.rating-review .guest-rating-static.guest-rating-43{background-position:0 -108px;}
+.rating-review .guest-rating-static.guest-rating-44{background-position:0 -93px;}
+.rating-review .guest-rating-static.guest-rating-45{background-position:0 -76px;}
+.rating-review .guest-rating-static.guest-rating-46{background-position:0 -62px;}
+.rating-review .guest-rating-static.guest-rating-47{background-position:0 -46px;}
+.rating-review .guest-rating-static.guest-rating-48{background-position:0 -31px;}
+.rating-review .guest-rating-static.guest-rating-49{background-position:0 -15px;}
+.rating-review .guest-rating-static.guest-rating-50{background-position:0 0}

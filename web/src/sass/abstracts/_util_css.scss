@@ -1,0 +1,493 @@
+@import "../_includes";
+
+
+/* DISPLAY */
+.block {
+	@include display(block);
+}
+.inline-block {
+	@include display(inline-block);
+}
+.none {
+	@include display(none);
+}
+
+/* PADDING */
+.no-padd {
+	@include padd(0);
+}
+.padd-xsml {
+	@include padd($XSML-SPC);
+}
+.padd-sml {
+	@include padd($SML-SPC);
+}
+.padd-med {
+	@include padd($MED-SPC);
+}
+.padd-xmed {
+	@include padd($XMED-SPC);
+}
+.padd-lg {
+	@include padd($LG-SPC);
+}
+.padd-xlg {
+	@include padd($XLG-SPC);
+}
+.padd-xxlg {
+	@include padd($XXLG-SPC);
+}
+.padd-left-xsml {
+	@include padd-left($XSML-SPC);
+}
+.padd-left-sml {
+	@include padd-left($SML-SPC);
+}
+.padd-left-med {
+	@include padd-left($MED-SPC);
+}
+.padd-left-xmed {
+	@include padd-left($XMED-SPC);
+}
+.padd-left-lg {
+	@include padd-left($LG-SPC);
+}
+.padd-left-xlg {
+	@include padd-left($XLG-SPC);
+}
+.padd-left-xxlg {
+	@include padd-left($XXLG-SPC);
+}
+.padd-right-xsml {
+	@include padd-right($XSML-SPC);
+}
+.padd-right-sml {
+	@include padd-right($SML-SPC);
+}
+.padd-right-med {
+	@include padd-right($MED-SPC);
+}
+.padd-right-xmed {
+	@include padd-right($XMED-SPC);
+}
+.padd-right-lg {
+	@include padd-right($LG-SPC);
+}
+.padd-right-xlg {
+	@include padd-right($XLG-SPC);
+}
+.padd-right-xxlg {
+	@include padd-right($XXLG-SPC);
+}
+.padd-top-xsml {
+	@include padd-top($XSML-SPC);
+}
+.padd-top-sml {
+	@include padd-top($SML-SPC);
+}
+.padd-top-med {
+	@include padd-top($MED-SPC);
+}
+.padd-top-xmed {
+	@include padd-top($XMED-SPC);
+}
+.padd-top-lg {
+	@include padd-top($LG-SPC);
+}
+.padd-top-xlg {
+	@include padd-top($XLG-SPC);
+}
+.padd-top-xxlg {
+	@include padd-top($XXLG-SPC);
+}
+.padd-bottom-xsml {
+	@include padd-bottom($XSML-SPC);
+}
+.padd-bottom-sml {
+	@include padd-bottom($SML-SPC);
+}
+.padd-bottom-med {
+	@include padd-bottom($MED-SPC);
+}
+.padd-bottom-xmed {
+	@include padd-bottom($XMED-SPC);
+}
+.padd-bottom-lg {
+	@include padd-bottom($LG-SPC);
+}
+.padd-bottom-xlg {
+	@include padd-bottom($XLG-SPC);
+}
+.padd-bottom-xxlg {
+	@include padd-bottom($XXLG-SPC);
+}
+.padd-vert-xsml {
+	@include padd-vert($XSML-SPC);
+}
+.padd-vert-sml {
+	@include padd-vert($SML-SPC);
+}
+.padd-vert-med {
+	@include padd-vert($MED-SPC);
+}
+.padd-vert-xmed {
+	@include padd-vert($XMED-SPC);
+}
+.padd-vert-lg {
+	@include padd-vert($LG-SPC);
+}
+.padd-vert-xlg {
+	@include padd-vert($XLG-SPC);
+}
+.padd-vert-xxlg {
+	@include padd-vert($XXLG-SPC);
+}
+.padd-horz-xsml {
+	@include padd-left($XSML-SPC);
+	@include padd-right($XSML-SPC);
+}
+.padd-horz-sml {
+	@include padd-left($SML-SPC);
+	@include padd-right($SML-SPC);
+}
+.padd-horz-med {
+	@include padd-left($MED-SPC);
+	@include padd-right($MED-SPC);
+}
+.padd-horz-xmed {
+	@include padd-left($XMED-SPC);
+	@include padd-right($XMED-SPC);
+}
+.padd-horz-lg {
+	@include padd-left($LG-SPC);
+	@include padd-right($LG-SPC);
+}
+.padd-horz-xlg {
+	@include padd-left($XLG-SPC);
+	@include padd-right($XLG-SPC);
+}
+.padd-horz-xxlg {
+	@include padd-left($XXLG-SPC);
+	@include padd-right($XXLG-SPC);
+}
+
+
+/* MARGIN */
+.mgn-xsml {
+	@include mgn($XSML-SPC);
+}
+.mgn-sml {
+	@include mgn($SML-SPC);
+}
+.mgn-med {
+	@include mgn($MED-SPC);
+}
+.mgn-xmed {
+	@include mgn($XMED-SPC);
+}
+.mgn-lg {
+	@include mgn($LG-SPC);
+}
+.mgn-xlg {
+	@include mgn($XLG-SPC);
+}
+.mgn-xxlg {
+	@include mgn($XXLG-SPC);
+}
+.mgn-left-xsml {
+	@include mgn-left($XSML-SPC);
+}
+.mgn-left-sml {
+	@include mgn-left($SML-SPC);
+}
+.mgn-left-med {
+	@include mgn-left($MED-SPC);
+}
+.mgn-left-xmed {
+	@include mgn-left($XMED-SPC);
+}
+.mgn-left-lg {
+	@include mgn-left($LG-SPC);
+}
+.mgn-left-xlg {
+	@include mgn-left($XLG-SPC);
+}
+.mgn-left-xxlg {
+	@include mgn-left($XXLG-SPC);
+}
+.mgn-right-xsml {
+	@include mgn-right($XSML-SPC);
+}
+.mgn-right-sml {
+	@include mgn-right($SML-SPC);
+}
+.mgn-right-med {
+	@include mgn-right($MED-SPC);
+}
+.mgn-right-xmed {
+	@include mgn-right($XMED-SPC);
+}
+.mgn-right-lg {
+	@include mgn-right($LG-SPC);
+}
+.mgn-right-xlg {
+	@include mgn-right($XLG-SPC);
+}
+.mgn-right-xxlg {
+	@include mgn-right($XXLG-SPC);
+}
+.mgn-top-xsml {
+	@include mgn-top($XSML-SPC);
+}
+.mgn-top-sml {
+	@include mgn-top($SML-SPC);
+}
+.mgn-top-med {
+	@include mgn-top($MED-SPC);
+}
+.mgn-top-xmed {
+	@include mgn-top($XMED-SPC);
+}
+.mgn-top-lg {
+	@include mgn-top($LG-SPC);
+}
+.mgn-top-xlg {
+	@include mgn-top($XLG-SPC);
+}
+.mgn-top-xxlg {
+	@include mgn-top($XXLG-SPC);
+}
+.mgn-bottom-xsml {
+	@include mgn-bottom($XSML-SPC);
+}
+.mgn-bottom-sml {
+	@include mgn-bottom($SML-SPC);
+}
+.mgn-bottom-med {
+	@include mgn-bottom($MED-SPC);
+}
+.mgn-bottom-xmed {
+	@include mgn-bottom($XMED-SPC);
+}
+.mgn-bottom-lg {
+	@include mgn-bottom($LG-SPC);
+}
+.mgn-bottom-xlg {
+	@include mgn-bottom($XLG-SPC);
+}
+.mgn-bottom-xxlg {
+	@include mgn-bottom($XXLG-SPC);
+}
+.mgn-vert-xsml {
+	@include mgn-vert($XSML-SPC);
+}
+.mgn-vert-sml {
+	@include mgn-vert($SML-SPC);
+}
+.mgn-vert-med {
+	@include mgn-vert($MED-SPC);
+}
+.mgn-vert-xmed {
+	@include mgn-vert($XMED-SPC);
+}
+.mgn-vert-lg {
+	@include mgn-vert($LG-SPC);
+}
+.mgn-vert-xlg {
+	@include mgn-vert($XLG-SPC);
+}
+.mgn-vert-xxlg {
+	@include mgn-vert($XXLG-SPC);
+}
+.mgn-horz-xsml {
+	@include mgn-horz($XSML-SPC);
+}
+.mgn-horz-sml {
+	@include mgn-horz($SML-SPC);
+}
+.mgn-horz-med {
+	@include mgn-horz($MED-SPC);
+}
+.mgn-horz-xmed {
+	@include mgn-horz($XMED-SPC);
+}
+.mgn-horz-lg {
+	@include mgn-horz($LG-SPC);
+}
+.mgn-horz-xlg {
+	@include mgn-horz($XLG-SPC);
+}
+.mgn-horz-xxlg {
+	@include mgn-horz($XXLG-SPC);
+}
+.no-mgn {
+	@include mgn(0);
+}
+
+
+/* TEXT */
+.txt-center {
+	@include txt-align(center);
+}
+.txt-left {
+	@include txt-align(left);
+}
+.txt-right {
+	@include txt-align(right);
+}
+.txt-justify {
+	@include txt-align(justify);
+}
+.txt-truncate {
+	@include wht-spc(nowrap);
+	@include ovflow(hidden);
+	@include txt-overflow(ellipsis);
+}
+.txt-bold {
+	@include fnt-weight(bold);
+}
+.txt-no-underline {
+	@include txt-decor(none);
+}
+.fnt-xsml {
+	@include fnt-size(10pt);
+}
+.fnt-sml {
+	@include fnt-size(11pt);
+}
+.fnt-med {
+	@include fnt-size(12pt);
+}
+.fnt-xmed {
+	@include fnt-size(14pt);
+}
+.fnt-lg {
+	@include fnt-size(16pt);
+}
+.fnt-xlg {
+	@include fnt-size(20pt);
+}
+.fnt-white{
+	@include colr(#FFF !important);
+}
+.fnt-italic {
+	@include fnt-style(italic);
+}
+.fnt-underline {
+	@include txt-decor(underline);
+}
+
+/* POSITIONING */
+.clearfix {
+	&:before, &:after {
+		@include display(table);
+		@include cont(" ");
+	}
+	&:after {
+		@include clr(both);
+	}
+}
+.f-left {
+	@include flt(left);
+}
+.f-right {
+	@include flt(right);
+}
+.pos-relative {
+	@include pos(relative);
+}
+.pos-absolute {
+	@include pos(absolute);
+}
+.fixed-top {
+	@include anchor(0,0,auto,0);
+}
+.fixed-bottom {
+	@include anchor(auto,0,0,0);
+}
+.fixed-left {
+	@include anchor(0,auto,0,0);
+}
+.fixed-right {
+	@include anchor(0,0,0,auto);
+}
+
+/*UTILITY*/
+.full-w {
+	@include w(100%);
+}
+.pointer {
+	@include csr(pointer);
+}
+.no-select {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.mobile-scroll {
+	-webkit-overflow-scrolling: touch;
+}
+.no-mobile-scroll {
+	-webkit-overflow-scrolling: auto;
+}
+.no-ovflow {
+	@include ovflow(hidden);
+}
+.no-mobile-tap {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* FLEX PROP */
+.flex-container-prop {
+	@include display(flex);
+	@include jstfy-cont(flex-start);
+	@include alg-item(stretch);
+	@include alg-cont(flex-start);
+}
+.flex-column-container-prop {
+	@include flex-container-prop();
+	@include flx-flow(column nowrap);
+}
+.flex-row-container-prop {
+	@include flex-container-prop();
+	@include flx-flow(row nowrap);
+}
+
+/* Font Weight */
+.fnt-thin {
+	@include fnt-weight(100);
+}
+.fnt-light {
+	@include fnt-weight(300);
+}
+.fnt-normal {
+	@include fnt-weight(400);
+}
+.fnt-medium {
+	@include fnt-weight(500);
+}
+.fnt-bold {
+	@include fnt-weight(700);
+}
+
+
+/* ANIMATION */
+.transtn-very-fast {
+	@include transtn(all .15s $EASE-OUT);
+}
+.transtn-fast {
+	@include transtn(all .25s $EASE-OUT);
+}
+.transtn-normal {
+	@include transtn(all .4s $EASE-OUT);
+}
+.transtn-slow {
+	@include transtn(all .8s $EASE-OUT);
+}
+
+
+/* VERTICAL ALIGNMENT */
+.valign-middle {
+	@include valign(middle);
+}

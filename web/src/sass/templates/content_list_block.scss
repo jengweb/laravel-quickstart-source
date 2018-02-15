@@ -1,0 +1,84 @@
+@import "../includes";
+
+.content-list-block-section {
+  background-color: $color-secondary-header;
+  @include padd-horz(15px);
+  @include padd-vert(percentage(40/640));
+  @media screen and (min-width: $sc-md-min) {
+    @include padd-horz(percentage(55/1380));
+    @include padd-vert(percentage(30/1380));
+  }
+  &.text-image {
+    .image-block-container {
+      @media screen and (min-width: $sc-lg-min) {
+        order: 3;
+      }
+    }
+    .article-block-container {
+      @media screen and (min-width: $sc-lg-min) {
+        padding-left: 0;
+        padding-right: percentage(75/1380);
+      }
+    }
+    .info-block-container {
+      @media screen and (min-width: $sc-lg-min) {
+        padding-top: percentage(30/1380);
+        padding-left: 0;
+        padding-right: percentage(75/1380);
+      }
+    }
+  }
+  .list-wrapper {
+    @include padd-vert(percentage(30/640));
+    @media screen and (min-width: $sc-md-min) {
+      @include padd-vert(percentage(20/768));
+    }
+    @media screen and (min-width: $sc-lg-min) {
+      @include padd-vert(percentage(20/1380));
+    }
+    //&:last-of-type {
+    //  padding-bottom: 0;
+    //}
+  }
+  .image-block-container {
+    .section-image {
+      position: relative;
+      padding-top: percentage(320/500);
+    }
+    .btn-primary {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  .article-block-container {
+    padding-top: percentage(30/640);
+    padding-bottom: percentage(40/640);
+    @media screen and (min-width: $sc-md-min) {
+      padding-top: percentage(30/768);
+      padding-bottom: percentage(40/768);
+    }
+    @media screen and (min-width: $sc-lg-min) {
+      padding-left: percentage(75/1380);
+      @include padd-vert(0);
+    }
+    .heading {
+      @include fp(font-size, 21, 28);
+      color: $color-primary;
+    }
+    .article {
+      padding-top: percentage(27/640);
+      @media screen and (min-width: $sc-lg-min) {
+        padding-top: percentage(27/1380);
+      }
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .info-block-container {
+    @media screen and (min-width: $sc-lg-min) {
+      padding-left: percentage(75/1380);
+    }
+  }
+}

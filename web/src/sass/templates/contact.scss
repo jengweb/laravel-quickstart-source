@@ -1,0 +1,91 @@
+@import "../includes";
+
+.contact-section {
+  @include clearfix();
+  .form-contact-wrapper {
+    padding: percentage(70/640) 15px;
+    @media screen and (min-width: $sc-md-min) {
+      @include padd-vert(percentage(40/768));
+      @include padd-horz(percentage(30/768));
+    }
+    @media screen and (min-width: $sc-lg-min) {
+      padding-left: percentage(55/1380);
+      padding-right: percentage(120/1380);
+      padding-top: percentage(50/1380);
+      padding-bottom: percentage(50/1380);
+      width: 41.66667%;
+      float: left;
+    }
+    .sub-heading {
+      @include fp('font-size', 18, 24);
+      color: $color-grey;
+      padding-bottom: percentage(40/640);
+      @media screen and (min-width: $sc-md-min) {
+        padding-bottom: percentage(40/768);
+      }
+      @media screen and (min-width: $sc-lg-min) {
+        padding-bottom: percentage(25/395);
+      }
+    }
+    .article {
+      padding-top: percentage(55/640);
+      padding-bottom: percentage(75/640);
+      @media screen and (min-width: $sc-md-min) {
+        padding-top: percentage(55/768);
+        padding-bottom: percentage(55/768);
+      }
+      @media screen and (min-width: $sc-lg-min) {
+        padding-top: percentage(35/1380);
+        padding-bottom: percentage(45/395);
+      }
+      p {
+        a {
+          color: $color-secondary;
+        }
+      }
+    }
+    .form-contact {
+      border-top: 1px solid #999;
+      padding-top: percentage(75/640);
+      @media screen and (min-width: $sc-md-min) {
+        padding-top: percentage(75/768);
+      }
+      @media screen and (min-width: $sc-lg-min) {
+        padding-top: percentage(45/395);
+      }
+      h3 {
+        @include fp('font-size', 18, 24);
+        color: $color-grey;
+        margin-bottom: 15px;
+      }
+    }
+    .btn-default {
+      min-width: 125px;
+    }
+    .form-control {
+      border: 0;
+      border-bottom: 1px solid #999;
+      @include placeholder(#999);
+    }
+    textarea {
+      height: 40px;
+    }
+  }
+  .map-block-container {
+    @media screen and (min-width: $sc-lg-min) {
+      float: left;
+       width: 58.3333333%;
+    }
+    .map-wrapper {
+      padding-top: percentage(950/640);
+      position: relative;
+      @media screen and (min-width: $sc-lg-min) {
+        padding-top: percentage(760/985);
+      }
+    }
+  }
+  #map {
+    position: absolute;
+    @include anchor-all(0);
+  }
+}

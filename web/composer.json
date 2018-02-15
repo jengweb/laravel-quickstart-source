@@ -1,19 +1,37 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "quo/quiq-cms-client",
+    "description": "QUO-CMS Client",
+    "keywords": ["QUO", "cms", "laravel"],
     "license": "MIT",
     "type": "project",
+    "author": [
+        {
+            "name": "Nuttawut Malee",
+            "email": "nuttawutmalee@gmail.com",
+            "role": "Developer"
+        }
+    ],
     "require": {
-        "php": ">=5.5.9",
-        "laravel/framework": "5.2.*"
+        "php": ">=7",
+        "approached/laravel-image-optimizer": "^2.3",
+        "barryvdh/laravel-cors": "^0.9.2",
+        "bkwld/croppa": "~4.0",
+        "cknow/laravel-money": "^1.0",
+        "emarref/guzzle-param-middleware": "^1.0",
+        "fadion/fixerio": "~1.0",
+        "guzzlehttp/guzzle": "~6.0",
+        "htmlmin/htmlmin": "^4.5",
+        "kevinrob/guzzle-cache-middleware": "^2.0",
+        "laravel/framework": "5.4.*",
+        "laravel/tinker": "~1.0",
+        "spatie/laravel-partialcache": "^1.2",
+        "spatie/laravel-responsecache": "^3.2",
+        "torann/geoip": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~4.0",
-        "symfony/css-selector": "2.8.*|3.0.*",
-        "symfony/dom-crawler": "2.8.*|3.0.*"
+        "phpunit/phpunit": "~5.7"
     },
     "autoload": {
         "classmap": [
@@ -21,32 +39,35 @@
         ],
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        "files": [
+            "app/CMS/Helpers.php"
+        ]
     },
     "autoload-dev": {
-        "classmap": [
-            "tests/TestCase.php"
-        ]
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
     },
     "scripts": {
         "post-root-package-install": [
-            "php -r \"copy('.env.example', '.env');\""
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
             "php artisan key:generate"
         ],
         "post-install-cmd": [
-            "php artisan clear-compiled",
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
             "php artisan optimize"
         ],
-        "pre-update-cmd": [
-            "php artisan clear-compiled"
-        ],
         "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan optimize"
         ]
     },
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
     }
 }
