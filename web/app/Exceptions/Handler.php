@@ -2,9 +2,11 @@
 
 namespace App\Exceptions;
 
-use App\CMS\Helpers\CMSHelper;
 use Exception;
-use Illuminate\Auth\AuthenticationException;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -15,12 +17,10 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontReport = [
-        \Illuminate\Auth\AuthenticationException::class,
-        \Illuminate\Auth\Access\AuthorizationException::class,
-        \Symfony\Component\HttpKernel\Exception\HttpException::class,
-        \Illuminate\Database\Eloquent\ModelNotFoundException::class,
-        \Illuminate\Session\TokenMismatchException::class,
-        \Illuminate\Validation\ValidationException::class,
+        AuthorizationException::class,
+        HttpException::class,
+        ModelNotFoundException::class,
+        ValidationException::class,
     ];
 
     /**
@@ -28,74 +28,23 @@ class Handler extends ExceptionHandler
      *
      * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
      *
-     * @param  \Exception  $exception
+     * @param  \Exception  $e
      * @return void
      */
-    public function report(Exception $exception)
+    public function report(Exception $e)
     {
-        if (env('APP_DEBUG', false) || strtolower(env('APP_DEBUG', false)) === 'true') {
-            parent::report($exception);
-        }
+        parent::report($e);
     }
 
     /**
      * Render an exception into an HTTP response.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Exception  $exception
-     * @return \Illuminate\Http\Response|\Symfony\Component\HttpFoundation\Response
-     */
-    public function render($request, Exception $exception)
-    {
-        $request->attributes->add(['exception_found' => true]);
-
-        if ($request->is('uploads/*')) {
-            if ($request->is('uploads/_crops/*')
-                && !! preg_match('/(.*\/)(?:_crops\/)(.*)(?:-(?:\d+|_)x(?:\d+|_).*)(\.\w+)$/', $request->fullUrl())) {
-                $reversed = preg_replace('/(.*\/)(?:_crops\/)(.*)(?:-(?:\d+|_)x(?:\d+|_).*)(\.\w+)$/', '$1$2$3', $request->fullUrl());
-                return redirect($reversed);
-            } else {
-                /** @noinspection PhpUndefinedMethodInspection */
-                return response()->apiJson(null, $exception->getMessage(), $exception->getStatusCode() ?: 500);
-            }
-        }
-
-        if ($this->isHttpException($exception)) {
-            if ( ! env('APP_DEBUG', false)) {
-                /** @noinspection PhpUndefinedMethodInspection */
-                $statusCode = $exception->getStatusCode() ?: 500;
-                $defaultTemplate = 'errors.' . $statusCode;
-
-                if ($site = CMSHelper::getSite()) {
-                    $template = CMSHelper::getTemplatePath('errors.' . $statusCode);
-
-                    if (view()->exists($template)) {
-                        return response()->view($template);
-                    }
-                }
-
-                if (view()->exists($defaultTemplate)) {
-                    return response()->view($defaultTemplate);
-                }
-            }
-        }
-
-        return parent::render($request, $exception);
-    }
-
-    /**
-     * Convert an authentication exception into an unauthenticated response.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Illuminate\Auth\AuthenticationException  $exception
+     * @param  \Exception  $e
      * @return \Illuminate\Http\Response
      */
-    protected function unauthenticated($request, /** @noinspection PhpUnusedParameterInspection */ AuthenticationException $exception)
+    public function render($request, Exception $e)
     {
-        if ($request->expectsJson()) {
-            return response()->json(['error' => 'Unauthenticated.'], 401);
-        }
-
-        return redirect()->guest(route('login'));
+        return parent::render($request, $e);
     }
 }
